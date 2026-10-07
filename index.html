@@ -678,6 +678,7 @@ dialog#modal{overflow:auto;overscroll-behavior:contain}
             <label>Full name<input name="name" required autocomplete="name"></label>
             <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
           </div>
+          <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
           <label>Service needed
             <select name="service">
               <option>Renewable Energy</option><option>Electrical Works</option><option>Automation & Control</option>
@@ -761,6 +762,24 @@ const PROJECTS = [
     ]
   },
   {
+    title: "18 kWp Hybrid Solar System with 32 kWh Storage",
+    category: "Renewable Energy",
+    alsoIn: ["Automation & Control"],
+    location: "Ain Ebel, South Lebanon",
+    year: "2024",
+    summary: "18 kWp hybrid solar system with 32 kWh of battery storage and an automatic changeover panel for grid, generators and solar, commissioned in 2024.",
+    description: [
+      "WireTech S.A.R.L. designed, installed and commissioned an 18 kWp hybrid solar system with 32 kWh of battery storage in Ain Ebel, South Lebanon.",
+      "The system is built around a Deye hybrid inverter with two floor-standing lithium battery cabinets and a dedicated DC protection and isolation box. All cables run through trunking for a clean, safe and serviceable installation.",
+      "An automatic changeover panel manages the site's power sources: the public grid (EDL), the local and neighborhood generators, and the solar system. Using contactors, protection relays and clearly labeled circuits, it switches automatically to the right source, with a manual bypass switch for maintenance."
+    ],
+    specs: [["System","Hybrid solar + storage"],["PV capacity","18 kWp"],["Battery storage","32 kWh"],["Inverter","Deye hybrid"],["Source control","Automatic changeover"],["Commissioned","2024"]],
+    photos: [
+      ["ae18a","Deye hybrid inverter, battery storage and DC protection box"],
+      ["ae18b","Automatic changeover panel for grid, generators and solar"]
+    ]
+  },
+  {
     title: "15 kWp Solar System with 40 kWh Storage",
     category: "Renewable Energy",
     location: "Rmeich, South Lebanon",
@@ -774,6 +793,38 @@ const PROJECTS = [
     specs: [["System","Solar + battery storage"],["PV capacity","15 kWp"],["Battery storage","40 kWh"],["Inverters","SMA"],["Commissioned","2022"]],
     photos: [
       ["rmeich","SMA solar and battery inverters in the technical room","50% 0%"]
+    ]
+  },
+  {
+    title: "15 kWp Hybrid Solar System with 20 kWh Storage",
+    category: "Renewable Energy",
+    location: "Ain Ebel, South Lebanon",
+    year: "2022",
+    summary: "15 kWp hybrid solar system with 20 kWh of lithium battery storage, commissioned in 2022.",
+    description: [
+      "WireTech S.A.R.L. designed, installed and commissioned a 15 kWp hybrid solar system with 20 kWh of battery storage in Ain Ebel, South Lebanon.",
+      "The system is built around a Deye hybrid inverter connected to wall-mounted lithium battery modules, with DC protection and a dedicated AC distribution board. All cables are neatly routed through trunking for a clean, safe and easy-to-maintain installation.",
+      "The system supplies the site with solar power during the day and keeps it running from the batteries at night and during grid outages."
+    ],
+    specs: [["System","Hybrid solar + storage"],["PV capacity","15 kWp"],["Battery storage","20 kWh"],["Inverter","Deye hybrid"],["Commissioned","2022"]],
+    photos: [
+      ["ainebel15","Deye hybrid inverter and lithium battery storage","50% 20%"]
+    ]
+  },
+  {
+    title: "6 kWp Solar System with 15 kWh Storage",
+    category: "Renewable Energy",
+    location: "Ain Ebel, South Lebanon",
+    year: "2022",
+    summary: "6 kWp solar system with 15 kWh of battery storage, commissioned in 2022.",
+    description: [
+      "WireTech S.A.R.L. designed, installed and commissioned a 6 kWp solar system with 15 kWh of battery storage in Ain Ebel, South Lebanon.",
+      "The system uses a PCE solar inverter connected to the battery bank, with a dedicated protection box containing breakers and surge protection. Cables are routed through trunking for a clean and safe installation.",
+      "The system keeps the site powered from solar energy during the day and from the batteries at night and during grid outages."
+    ],
+    specs: [["System","Solar + storage"],["PV capacity","6 kWp"],["Battery storage","15 kWh"],["Inverter","PCE"],["Commissioned","2022"]],
+    photos: [
+      ["ainebel6","PCE inverter with protection box","50% 15%"]
     ]
   },
   {
@@ -794,56 +845,6 @@ const PROJECTS = [
       ["bangui2","Installation of the PV canopy structures","50% 40%"],
       ["bangui3","SMA Fuel Save hybrid controller"],
       ["bangui4","Central monitoring room"]
-    ]
-  },
-  {
-    title: "15 kWp Hybrid Solar System with 20 kWh Storage",
-    category: "Renewable Energy",
-    location: "Ain Ebel, South Lebanon",
-    year: "",
-    summary: "15 kWp hybrid solar system with 20 kWh of lithium battery storage.",
-    description: [
-      "WireTech S.A.R.L. designed, installed and commissioned a 15 kWp hybrid solar system with 20 kWh of battery storage in Ain Ebel, South Lebanon.",
-      "The system is built around a Deye hybrid inverter connected to wall-mounted lithium battery modules, with DC protection and a dedicated AC distribution board. All cables are neatly routed through trunking for a clean, safe and easy-to-maintain installation.",
-      "The system supplies the site with solar power during the day and keeps it running from the batteries at night and during grid outages."
-    ],
-    specs: [["System","Hybrid solar + storage"],["PV capacity","15 kWp"],["Battery storage","20 kWh"],["Inverter","Deye hybrid"]],
-    photos: [
-      ["ainebel15","Deye hybrid inverter and lithium battery storage","50% 20%"]
-    ]
-  },
-  {
-    title: "6 kWp Solar System with 15 kWh Storage",
-    category: "Renewable Energy",
-    location: "Ain Ebel, South Lebanon",
-    year: "",
-    summary: "6 kWp solar system with 15 kWh of battery storage.",
-    description: [
-      "WireTech S.A.R.L. designed, installed and commissioned a 6 kWp solar system with 15 kWh of battery storage in Ain Ebel, South Lebanon.",
-      "The system uses a PCE solar inverter connected to the battery bank, with a dedicated protection box containing breakers and surge protection. Cables are routed through trunking for a clean and safe installation.",
-      "The system keeps the site powered from solar energy during the day and from the batteries at night and during grid outages."
-    ],
-    specs: [["System","Solar + storage"],["PV capacity","6 kWp"],["Battery storage","15 kWh"],["Inverter","PCE"]],
-    photos: [
-      ["ainebel6","PCE inverter with protection box","50% 15%"]
-    ]
-  },
-  {
-    title: "18 kWp Hybrid Solar System with 32 kWh Storage",
-    category: "Renewable Energy",
-    alsoIn: ["Automation & Control"],
-    location: "Ain Ebel, South Lebanon",
-    year: "",
-    summary: "18 kWp hybrid solar system with 32 kWh of battery storage and an automatic changeover panel for grid, generators and solar.",
-    description: [
-      "WireTech S.A.R.L. designed, installed and commissioned an 18 kWp hybrid solar system with 32 kWh of battery storage in Ain Ebel, South Lebanon.",
-      "The system is built around a Deye hybrid inverter with two floor-standing lithium battery cabinets and a dedicated DC protection and isolation box. All cables run through trunking for a clean, safe and serviceable installation.",
-      "An automatic changeover panel manages the site's power sources: the public grid (EDL), the local and neighborhood generators, and the solar system. Using contactors, protection relays and clearly labeled circuits, it switches automatically to the right source, with a manual bypass switch for maintenance."
-    ],
-    specs: [["System","Hybrid solar + storage"],["PV capacity","18 kWp"],["Battery storage","32 kWh"],["Inverter","Deye hybrid"],["Source control","Automatic changeover"]],
-    photos: [
-      ["ae18a","Deye hybrid inverter, battery storage and DC protection box"],
-      ["ae18b","Automatic changeover panel for grid, generators and solar"]
     ]
   }
 ];
@@ -942,10 +943,10 @@ $("#quote").addEventListener("submit",e=>{
   e.preventDefault(); const form=e.target, note=$("#formNote"), via=e.submitter&&e.submitter.dataset.via||"wa";
   if(!form.name.value.trim()||!form.phone.value.trim()){note.textContent="Add your name and phone number so we can reach you.";note.className="form-note err";return}
   note.className="form-note";
-  const text="Quote request - WIRETECH SARL\nName: "+form.name.value+"\nPhone: "+form.phone.value+"\nService: "+form.service.value+"\nDetails: "+form.msg.value;
+  const text="Quote request - WIRETECH SARL\nName: "+form.name.value+"\nPhone: "+form.phone.value+(form.email.value.trim()?"\nEmail: "+form.email.value.trim():"")+"\nService: "+form.service.value+"\nDetails: "+form.msg.value;
   if(via==="wa"){if(!waNumber()){note.textContent="WhatsApp isn't set up yet. Send your request by email instead.";return}window.open("https://wa.me/"+waNumber()+"?text="+encodeURIComponent(text),"_blank","noopener")}
   else{if(!realEmail()){note.textContent="Email isn't set up yet. Call us instead.";return}window.location.href="mailto:"+realEmail()+"?subject="+encodeURIComponent("Quote request - "+form.service.value)+"&body="+encodeURIComponent(text)}
-  note.textContent="Your message is ready. Press send to finish.";
+  note.textContent=via==="mail"?"Your email app should open with the message ready. If nothing opens, email us directly at "+realEmail()+".":"Your message is ready. Press send to finish.";
 });
 (function(){
   try{$("#yr").textContent=new Date().getFullYear()}catch(e){}
